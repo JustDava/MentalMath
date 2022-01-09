@@ -1,0 +1,184 @@
+/* -------------Header------------- */
+.navbar{
+    padding: 0;
+    margin: 15px 0;
+}
+.navbar-brand{
+    font-size: 40px;
+}
+.nav-item a {
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+}
+.nav-item a:after {
+    background-color: #000; /* Цвет линии при наведении на нее курсора мыши */
+    display: block;
+    content: "";
+    height: 2px; /* Высота линии */
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.nav-item a:hover:after,
+.nav-item a:focus:after {
+    width: 100%;
+}
+.welcome-block{
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    background-color: #000000;
+}
+.welcome-img{
+    opacity: 0.5;
+    width: 100%;
+}
+.welcome-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.welcome-maintext{
+    font-family: 'Neucha', cursive;
+    font-size: 72pt;
+    color: rgb(255, 255, 255);
+}
+.welcome-inner hr{
+    margin: auto;
+    color: rgb(13, 110, 253);
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 5px;
+    opacity: 1;
+}
+.welcome-subtext{
+    margin: 25px 0;
+    font-family: 'Neucha', cursive;
+    font-size: 22pt;
+    color: rgb(255, 255, 255);
+}
+.welcome-btnShowModal{
+    width: 20%;
+    padding: 10px 0;
+    font-size: 14pt;
+}
+.modal-body{
+    text-align: left;
+}
+.modal-footer button{
+    width: 100%;
+}
+/* -------------/Header------------- */
+
+/* --------Content Schedule--------- */
+.schedule-block{
+    margin: 50px 0;
+    text-align: center;
+}
+.star_separator{
+    margin-bottom: 50px;
+    font-size: 28pt;
+    color: rgb(13, 110, 253);
+}
+.schedule-headertext{
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.table{
+    text-align: left;
+    table-layout: auto;
+}
+/* th, th{
+    width: 2%;
+} */
+/* --------/Content Schedule--------- */
+
+@media (max-width: 1199px) {
+    .welcome-maintext{
+        font-size: 50pt;
+    }
+    .welcome-subtext{
+        font-size: 18pt;
+    }
+}
+@media (max-width: 991px) {
+    .welcome-maintext{
+        font-size: 40pt;
+    }
+    .welcome-subtext{
+        margin: 20px 0;
+        font-size: 18pt;
+    }
+    .welcome-btnShowModal{
+        font-size: 12pt;
+    }
+}
+@media (max-width: 767px) {
+    .welcome-maintext{
+        font-size: 30pt;
+    }
+    .welcome-inner hr{
+        border-radius: 4px;
+        height: 4px;
+    }
+    .welcome-subtext{
+        margin: 15px 0;
+        font-size: 16pt;
+    }
+    .welcome-btnShowModal{
+        width: 30%;
+        padding: 8px 0;
+        font-size: 10pt;
+    }
+}
+@media (max-width: 540px) {
+    .nav-item a {
+        font-size: 18px;
+    }
+    .welcome-maintext{
+        font-size: 18pt;
+    }
+    .welcome-inner hr{
+        border-radius: 3px;
+        height: 3px;
+    }
+    .welcome-subtext{
+        margin: 10px 0;
+        font-size: 10pt;
+    }
+    .welcome-btnShowModal{
+        width: 35%;
+        padding: 6px 0;
+        font-size: 10pt;
+    }
+}
+@media (max-width: 360px) {
+    .nav-item a {
+        font-size: 15px;
+        display: inline-block;
+        line-height: 1;
+        text-decoration: none;
+    }
+    .welcome-maintext{
+        font-size: 15pt;
+    }
+    .welcome-inner hr{
+        border-radius: 3px;
+        height: 2px;
+    }
+    .welcome-subtext{
+        margin: 8px 0;
+        font-size: 6pt;
+    }
+    .welcome-btnShowModal{
+        width: 35%;
+        padding: 5px 0;
+        font-size: 6pt;
+    }
+}
