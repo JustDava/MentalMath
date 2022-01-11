@@ -1,3 +1,8 @@
+.star_separator{
+    margin-bottom: 50px;
+    font-size: 28pt;
+    color: rgb(13, 110, 253);
+}
 /* -------------Header------------- */
 .navbar{
     padding: 0;
@@ -13,7 +18,7 @@
     text-decoration: none;
 }
 .nav-item a:after {
-    background-color: #000; /* Цвет линии при наведении на нее курсора мыши */
+    background-color: rgb(13, 110, 253); /* Цвет линии при наведении на нее курсора мыши */
     display: block;
     content: "";
     height: 2px; /* Высота линии */
@@ -80,11 +85,6 @@
     margin: 50px 0;
     text-align: center;
 }
-.star_separator{
-    margin-bottom: 50px;
-    font-size: 28pt;
-    color: rgb(13, 110, 253);
-}
 .schedule-headertext{
     font-size: 54pt;
     color: rgb(39, 37, 37);
@@ -130,6 +130,84 @@ th{
 }
 /* ------/Content Achievements------- */
 
+/* ------Content News------- */
+.news-block{
+    padding: 70px 0;
+    text-align: center;
+}
+.news-header hr{
+    margin: auto;
+    color: rgb(13, 110, 253);
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 5px;
+    opacity: 1;
+}
+.news-headertext{
+    margin-bottom: 25px;
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.news-subtext{
+    margin: 25px 0;
+    font-size: 15pt;
+    color: rgb(0, 0, 0);
+}
+.news-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.news-item{
+    width: 33.3333%;
+    padding: 40px;
+}
+/* ------/Content News------- */
+
+/* ------Content About Us------- */
+.aboutus-block{
+    padding: 70px 0;
+}
+.aboutus-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.aboutus-item{
+    width: 80%;
+}
+.news-header hr{
+    margin: auto;
+    color: rgb(13, 110, 253);
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 5px;
+    opacity: 1;
+}
+.news-headertext{
+    margin-bottom: 25px;
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.news-subtext{
+    margin: 25px 0;
+    font-size: 15pt;
+    color: rgb(0, 0, 0);
+}
+.news-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.news-item{
+    width: 33.3333%;
+    padding: 40px;
+}
+/* ------/Content About Us------- */
 
 @media (max-width: 1199px) {
     /* Header and welcome block */
@@ -159,6 +237,13 @@ th{
         padding: 60px 0;
     }
     .achievements-headertext{
+        font-size: 46pt;
+    }
+    /* Content News */
+    .news-block{
+        padding: 60px 0;
+    }
+    .news-headertext{
         font-size: 46pt;
     }
 }
@@ -205,6 +290,16 @@ th{
     }
     .achievements-text{
         font-size: 14pt;
+    }
+    /* Content News */
+    .news-block{
+        padding: 50px 0;
+    }
+    .news-headertext{
+        font-size: 36pt;
+    }
+    .news-item{
+        padding: 30px;
     }
 }
 @media (max-width: 767px) {
@@ -253,6 +348,17 @@ th{
     }
     .achievements-text{
         font-size: 12pt;
+    }
+    /* Content News */
+    .news-block{
+        padding: 40px 0;
+    }
+    .news-subtext{
+        font-size: 12pt;
+    }
+    .news-item{
+        padding: 20px;
+        width: 50%;
     }
 }
 @media (max-width: 540px) {
@@ -311,6 +417,20 @@ th{
     .achievements-block img{
         width: 80px;
     }
+    /* Content News */
+    .news-block{
+        padding: 30px 0;
+    }
+    .news-headertext{
+        font-size: 20pt;
+    }
+    .news-subtext{
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    .news-item{
+        width: 100%;
+    }
 }
 @media (max-width: 360px) {
     /* Header and welcome block */
@@ -359,8 +479,7 @@ th{
         font-size: 15pt;
     }
     .achievements-item{
-        padding: 20px;
-        width: 100%;
+        padding: 30px;
     }
     .achievements-title{
         margin: 10px 0;
@@ -371,5 +490,31 @@ th{
     }
     .achievements-block img{
         width: 50px;
+    }
+    /* Content News */
+    .news-block{
+        padding: 20px 0;
+    }
+    .news-headertext{
+        font-size: 15pt;
+    }
+    .news-subtext{
+        margin: 15px 0;
+        font-size: 8pt;
+    }
+    .news-item{
+        padding: 30px;
+    }
+    .news-item .card-title{
+        font-size: 10pt;
+    }
+    .news-item .card-text{
+        font-size: 8pt;
+    }
+    .news-btnReadMore{
+        font-size: 8pt;
+    }
+    .news-btnShowAllNews{
+        font-size: 10pt;
     }
 }
