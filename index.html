@@ -8,7 +8,12 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/fonts/Neucha-Regular.ttf">
+  <!-- <link rel="stylesheet" href="/assets/fonts/Neucha-Regular.ttf"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c2f6f48409.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c0bad1ee26a76e88d4378928ec4018b9020e740d88350e615e292344692eecc&amp;id=yandexmap&amp;lang=ru_RU&amp;scroll=true"></script>
   <title>MentalMath</title>
 </head>
 
@@ -59,7 +64,9 @@
         <div class="welcome-headertext">
           Школа ментальной арифметики
         </div>
-        <hr>
+        <div class="line_separator">
+          <hr>
+        </div>
         <div class="welcome-subtext">
           Сайт создан для учащихся и их родителей! Здесь вы можете получить необходимую информацию о нашей школе! Все
           новости вы можете посмотреть в разделе "Новости"​​​​​​​.
@@ -250,7 +257,9 @@
       <div class="news-headertext">
         Наши новости
       </div>
-      <hr>
+      <div class="line_separator">
+        <hr>
+      </div>
       <div class="news-subtext">
         На сайте представлена информация, которая касается деятельности школы​​​​​​​.
       </div>
@@ -323,17 +332,36 @@
 
   <!-------- content about us -------->
   <div class="container-fluid aboutus-block">
+    <div class="aboutus-header">
+      <div class="star_separator">
+        ★★★★★★★
+      </div>
+      <div class="aboutus-headertext">
+        Наши преподаватели
+      </div>
+    </div>
     <div class="aboutus-inner">
       <div class="aboutus-item">
         <div class="card border-light mb-3">
-          <div class="row g-0">
-            <div class="col-md-6">
-              <img src="assets/images/about_us/aboutus_1.jpg" class="img-fluid rounded-start" alt="aboutus_1">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-6 aboutus-img-col">
+              <img src="assets/images/about_us/aboutus_1.jpg" class="img-fluid" alt="aboutus_1">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 aboutus-text-col">
+              <div class="card-header card-title">
+                Учитель: Анастасия Сергеевна
+              </div>
               <div class="card-body">
-                <h5 class="card-header">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <ul class="card-text">
+                  <li>Родилась в г. Белгород.</li>
+                  <li>В 2010г. закончила МОУ "СОШ № 17".</li>
+                  <li>Образование: БГТУ им. В.г. Шухова, выпуск 2015г.</li>
+                  <li>Специальность: математика и компьютерные науки.</li>
+                  <li>В 2017 году прошла профессиональную переподготовку в НИУ БелГУ. Имеет право на ведение профессиональной деятельности в сфере истории и методики обучения и воспитания младших школьников.</li>
+                  <li>Свой педагогический стаж начала в "МДОУ №11"Ручеек".</li>
+                  <li>В 2018 году защитилась на 1 категорию по специальности "Воспитатель".</li>
+                  <li>С 2019 года работает в "Школе ментальной арифметики".</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -342,6 +370,137 @@
     </div>
   </div>
   <!-------- /content about us -------->
+
+  <!-------- content works -------->
+  <div class="container-fluid works-block">
+    <div class="works-header">
+      <div class="star_separator">
+        ★★★★★★★
+      </div>
+      <div class="works-headertext">
+        Фотографии процесса
+      </div>
+      <div class="line_separator">
+        <hr>
+      </div>
+      <div class="works-subtext">
+        Как проводятся занятия в фотографиях
+      </div>
+    </div>
+    <div class="works-inner">
+      <div class="works-item">
+        <div class="hover-text">
+          <figure class="effect-text">
+            <img src="/assets/images/works/works_1.jpeg" alt="works_1">
+              <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </figcaption>			
+          </figure>
+        </div>
+      </div>
+      <div class="works-item">
+        <div class="hover-text">
+          <figure class="effect-text">
+            <img src="/assets/images/works/works_2.jpeg" alt="works_2">
+              <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </figcaption>			
+          </figure>
+        </div>
+      </div>
+      <div class="works-item">
+        <div class="hover-text">
+          <figure class="effect-text">
+            <img src="/assets/images/works/works_3.jpeg" alt="works_3">
+              <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </figcaption>			
+          </figure>
+        </div>
+      </div>
+      <div class="works-item">
+        <div class="hover-text">
+          <figure class="effect-text">
+            <img src="/assets/images/works/works_4.jpeg" alt="works_4">
+              <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </figcaption>			
+          </figure>
+        </div>
+      </div>
+      <div class="works-item">
+        <div class="hover-text">
+          <figure class="effect-text">
+            <img src="/assets/images/works/works_5.jpeg" alt="works_5">
+              <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </figcaption>			
+          </figure>
+        </div>
+      </div>
+      <div class="works-item">
+        <div class="hover-text">
+          <figure class="effect-text">
+            <img src="/assets/images/works/works_6.jpeg" alt="works_6">
+              <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </figcaption>			
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------- /content works -------->
+
+  <!-------- footer and contact info -------->
+  <div class="container-fluid contactinfo-block">
+    <div class="contactinfo-header">
+      <div class="star_separator">
+        ★★★★★★★
+      </div>
+      <div class="contactinfo-headertext">
+        Контактная информация
+      </div>
+      <div class="line_separator">
+        <hr>
+      </div>
+    </div>
+    <div class="contactinfo-inner">
+      <div class="contactinfo-map">
+        <div id="yandexmap"></div>
+      </div>
+      <div class="contactinfo-contacts">
+        <div class="contactinfo-title">
+          Контактная информация:
+        </div>
+        <div class="contactinfo-text">
+          <p>г.Белгород, ул. Королева, 2К</p>
+          <p>Email: Test@yandex.ru</p>
+          <p>Телефон: 8 800 555 35 35 - администратор</p>
+          <p>Телефон: 8 800 444 34 34 - директор</p>
+          
+          <div class="contactinfo-socnet">
+            <p class="p-center">Присоединяйтесь к нам в социальных сетях:</p>
+            <ul class="social-icons">
+              <li><a href=""><i class="fa fa-vk"></i></a></li>
+              <li><a href=""><i class="fa fa-odnoklassniki"></i></a></li>
+              <li><a href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa fa-youtube"></i></a></li>
+              <li><a href=""><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <!-------- /footer and contact info -------->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
