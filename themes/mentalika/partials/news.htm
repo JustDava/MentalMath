@@ -1,0 +1,99 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "news"
+postsPerPage = 6
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "post"
+==
+{% set posts = blogPosts.posts %}
+
+<div class="news-header">
+    <div class="star_separator">
+        ★★★★★★★
+    </div>
+    <div class="news-headertext">
+        Наши новости
+    </div>
+    <div class="line_separator">
+        <hr>
+    </div>
+    <div class="news-subtext">
+        На сайте представлена информация, которая касается деятельности школы​​​​​​​.
+    </div>
+</div>
+<div class="news-inner">
+
+    {% for post in posts %}
+    <div class="news-item">
+        <div class="card">
+            {% for image in post.featured_images|slice(0,1) %}
+            <img src="{{ image.path }}" class="card-img-top" alt="{{ post.title }}">
+            {% endfor %}
+            <div class="card-body">
+                <h5 class="card-title">{{ post.published_at|date('d.m.Y года') }}</h5>
+                <p class="card-text">{{ post.excerpt }}</p>
+                <a href="{{ post.url }}" class="btn btn-primary news-btnReadMore">Читать далее</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- <div class="news-item">
+            <div class="card">
+                <img src="{{ '/assets/images/news/news_1.jpg' | theme }}" class="card-img-top" alt="news_1">
+                <div class="card-body">
+                    <h5 class="card-title">1 сентября 2021 года</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="" class="btn btn-primary news-btnReadMore">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="card">
+                <img src="{{ '/assets/images/news/news_3.jpg' | theme }}" class="card-img-top" alt="news_3">
+                <div class="card-body">
+                    <h5 class="card-title">8 октября 2021 года</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="" class="btn btn-primary news-btnReadMore">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="card">
+                <img src="{{ '/assets/images/news/news_4.jpg' | theme }}" class="card-img-top" alt="news_4">
+                <div class="card-body">
+                    <h5 class="card-title">25 ноября 2021 года</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="" class="btn btn-primary news-btnReadMore">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="card">
+                <img src="{{ '/assets/images/news/news_5.jpg' | theme }}" class="card-img-top" alt="news_5">
+                <div class="card-body">
+                    <h5 class="card-title">15 декабря 2021 года</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="" class="btn btn-primary news-btnReadMore">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="card">
+                <img src="{{ '/assets/images/news/news_6.jpg' | theme }}" class="card-img-top" alt="news_6">
+                <div class="card-body">
+                    <h5 class="card-title">10 января 2022 года</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="" class="btn btn-primary news-btnReadMore">Читать далее</a>
+                </div>
+            </div>
+        </div> -->
+</div>
+<button type="button" class="btn btn-primary btn-lg news-btnShowAllNews">Смотреть все новости</button>

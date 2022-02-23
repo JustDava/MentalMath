@@ -1,0 +1,1243 @@
+.star_separator{
+    margin-bottom: 50px;
+    font-size: 28pt;
+    color: rgb(13, 110, 253);
+}
+.line_separator hr{
+    margin: auto;
+    color: rgb(13, 110, 253);
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 5px;
+    opacity: 1;
+}
+/* -------------Header & Welcome------------- */
+.navbar{
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0;
+}
+.fixed-top{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.fixed-top:hover{
+    opacity: 1;
+}
+.navbar-brand{
+    font-size: 40px;
+}
+.nav-item a {
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+}
+.nav-item a:after {
+    background-color: rgb(13, 110, 253); /* Цвет линии при наведении на нее курсора мыши */
+    display: block;
+    content: "";
+    height: 2px; /* Высота линии */
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.nav-item a:hover:after,
+.nav-item a:focus:after {
+    width: 100%;
+}
+.account{
+    position: relative;
+    margin-left: 16px;
+}
+.account-name{
+    font-size: 14pt;
+    color: rgb(37, 37, 37);
+}
+.account img{
+    width: 50px;
+}
+.account-profile:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.account:hover .account-submenu{
+    display: block;
+}
+.account-submenu{
+    padding: 10px;
+    width: max-content;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: -12px;
+    z-index: 1000;
+    display: none;
+    list-style: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    line-height: 20px;
+}
+.account-submenu li a{
+    font-size: 15pt;
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+}
+.account-submenu li a:hover{
+    cursor: pointer;
+}
+
+.modal-reglink{
+    text-decoration: underline;
+    color: #6d1f1f;
+}
+.modal-reglink:hover{
+    cursor: pointer;
+}
+.welcome-block{
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    background-color: #000000;
+}
+.welcome-img{
+    opacity: 0.5;
+    width: 100%;
+}
+.welcome-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.welcome-headertext{
+    font-family: 'Neucha', cursive;
+    font-size: 72pt;
+    color: rgb(255, 255, 255);
+}
+.welcome-subtext{
+    margin: 25px 0;
+    font-family: 'Neucha', cursive;
+    font-size: 22pt;
+    color: rgb(255, 255, 255);
+}
+.welcome-btnShowModal{
+    width: 20%;
+    padding: 10px 0;
+    font-size: 14pt;
+}
+.modal-body{
+    text-align: left;
+}
+.modal-footer button{
+    width: 100%;
+}
+/* -------------/Header & Welcome------------- */
+
+/* --------Content Schedule--------- */
+.schedule-block{
+    margin: 50px 0;
+    text-align: center;
+}
+.schedule-headertext{
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.table{
+    margin-top: 40px;
+    font-size: 20pt;
+    text-align: left;
+    table-layout: auto;
+}
+th{
+    width: 20%;
+}
+/* --------/Content Schedule--------- */
+
+/* -------Content Achievements------- */
+.achievements-block{
+    padding: 70px 0;
+    text-align: center;
+    background-color: rgba(13, 110, 253, 0.8);
+    color: #fff;
+}
+.achievements-headertext{
+    font-family: 'Neucha', cursive;
+    font-size: 54pt;
+}
+.achievements-inner{
+    display: flex;
+    flex-wrap: wrap;
+}
+.achievements-item{
+    padding: 40px;
+    width: 33.3333%;
+}
+.achievements-title{
+    margin: 20px 0;
+    font-family: 'Neucha', cursive;
+    font-size: 20pt;
+}
+.achievements-text{
+    font-size: 15pt;
+}
+/* ------/Content Achievements------- */
+
+/* ------Content News------- */
+.news-block{
+    padding: 70px 0;
+    text-align: center;
+}
+.news-headertext{
+    margin-bottom: 25px;
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.news-subtext{
+    margin: 25px 0;
+    font-size: 15pt;
+    color: rgb(0, 0, 0);
+}
+.news-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.news-item{
+    width: 33.3333%;
+    padding: 40px;
+}
+.news-text{
+    padding: 0 20px;
+    text-align: justify;
+    font-size: 12pt;
+}
+.news-text p{
+    text-indent: 25px;
+}
+/* ------/Content News------- */
+
+/* ------Content About Us------- */
+.aboutus-block{
+    padding: 70px 0 0 0;
+    text-align: center;
+}
+.aboutus-headertext{
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.aboutus-inner{
+    margin: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.aboutus-item{
+    text-align: left;
+    width: 80%;
+}
+.aboutus-img-col-12{
+    display: none;
+}
+.aboutus-item .card-title{
+    font-size: 20pt;
+    font-weight: 500;
+}
+.aboutus-item .card-body{
+    padding: 10px;
+}
+/* ------/Content About Us------- */
+
+/* ------Content Works------- */
+.works-block{
+    padding: 70px 0 0 0;
+    text-align: center;
+}
+.works-headertext{
+    margin-bottom: 25px;
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.works-subtext{
+    margin: 25px 0;
+    font-size: 15pt;
+    color: rgb(0, 0, 0);
+}
+.works-inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+.works-item{
+    width: 33.3333%;
+    padding: 20px;
+}
+/* Общие стили */
+.hover-text {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+}
+.hover-text figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text figure figcaption::before,
+.hover-text figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text figure h3 span {
+	font-weight: 800;
+}
+.hover-text figure h3,
+.hover-text figure p {
+	margin: 0;
+}
+.hover-text figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+/* Эффект при наведении */
+figure.effect-text {
+	background: #527c82;
+}
+figure.effect-text img {
+	width: -webkit-calc(100% + 20px);
+	width: calc(100% + 20px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: scale(1.1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+figure.effect-text:hover img {
+	opacity: 0.4;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text figcaption {
+	text-align: left;
+}
+figure.effect-text h3 {
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 0;
+}
+figure.effect-text h3::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: rgba(13, 110, 253, 0.6);
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+figure.effect-text:hover h3::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text p {
+	padding: 1em 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+figure.effect-text:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+/* ------/Content Works------- */
+
+/* ------Contact info------- */
+.contactinfo-block{
+    background-color: rgba(81, 86, 92, 0.3);
+    padding: 70px 0 5px 0;
+    text-align: center;
+}
+.contactinfo-headertext{
+    margin-bottom: 25px;
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.contactinfo-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.contactinfo-map{
+    display: inherit;
+    justify-content: center;
+    width: 60%;
+}
+#yandexmap{
+    width: 100%;
+}
+.contactinfo-contacts{
+    text-align: left;
+    width: 40%;
+    padding: 40px 20px 0;
+}
+.contactinfo-title{
+    font-size: 30pt;
+    font-weight: 500;
+}
+.contactinfo-text{
+    margin-top: 20px;
+    font-size: 15pt;
+}
+.contactinfo-text .p-center{
+    font-size: 16pt;
+    font-weight: 500;
+    margin: 40px 0;
+    text-align: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+.social-icons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #efefef;
+    position: relative;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0 2px 6px #c1c1c1;
+    font-size: 32px;
+    color: #337AB7;
+    transition: 0.5s;
+}
+.social-icons a i{
+    z-index:2;
+    position: relative;
+    line-height: 60px;
+}
+.social-icons a:hover {
+    color: #fff;
+}
+.social-icons a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #BFE2FF;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    transition: 0.3s;
+    top: 0;
+    left: 50%;
+}
+.social-icons a:hover:after {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    background: #337AB7;
+}
+/* ------/Contact info------- */
+
+/* ------Activities page------- */
+.activities-block{
+    margin: 40px 0;
+    text-align: center;
+}
+.activities-headertext{
+    margin-bottom: 25px;
+    font-size: 54pt;
+    color: rgb(39, 37, 37);
+    font-family: 'Neucha', cursive;
+}
+.chart-panel{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-group{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 20%;
+    height: 300px;
+    overflow-y: scroll;
+}
+.list-group a:hover{
+    cursor: pointer;
+}
+.student-info{
+    width: 80%;
+}
+.student-full_name{
+    margin: 20px 0;
+    font-size: 20pt;
+}
+.student-activity_time{
+    margin-bottom: 20px;
+    font-size: 18pt;
+}
+.exbook-name{
+    font-size: 18pt;
+}
+.exbook-item{
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.exbook-chart{
+    width: 30%;
+}
+.exbook-chart rect{
+    width: 200px;
+}
+.first_exbook-answers{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.second_exbook-answers{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.third_exbook-answers{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.exbook-item table{
+    margin: 20px;
+}
+.exbook-item td, .exbook-item tr{
+    padding: 5px;
+    font-size: 10pt;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.wrong_answer{
+    background: rgba(155, 36, 36, 0.5);
+}
+.right_answer{
+    background: rgba(34, 161, 66, 0.5);
+}
+.hidden_spinner{
+    display: none;
+}
+/* ------/Activities page------- */
+
+@media (max-width: 1199px) {
+    .star_separator{
+        margin-bottom: 40px;
+        font-size: 24pt;
+    }
+    /* Header and welcome block */
+    .welcome-headertext{
+        font-size: 50pt;
+    }
+    .welcome-subtext{
+        font-size: 18pt;
+    }
+    /* Content Schedule */
+    .schedule-block{
+        margin: 40px 0;
+    }
+    .schedule-headertext{
+        font-size: 46pt;
+    }
+    .table{
+        margin-top: 35px;
+        font-size: 18pt;
+    }
+    /* Content Achievements */
+    .achievements-block{
+        padding: 60px 0;
+    }
+    .achievements-headertext{
+        font-size: 46pt;
+    }
+    /* Content News */
+    .news-block{
+        padding: 60px 0;
+    }
+    .news-headertext{
+        font-size: 46pt;
+    }
+    .news-item{
+        padding: 20px;
+    }
+    /* Content About us */
+    .aboutus-block{
+        padding: 60px 0 0 0;
+    }
+    .aboutus-headertext{
+        font-size: 46pt;
+    }
+    .aboutus-inner{
+        margin: 60px 0;
+    }
+    .aboutus-item{
+        width: 90%;
+    }
+    /* Content Works */
+    .works-block{
+        padding: 60px 0 0 0;
+    }
+    .works-headertext{
+        font-size: 46pt;
+    }
+    .hover-text figure figcaption {
+        padding: 1.5em;
+        font-size: 1em;
+    }
+    /* Contact info */
+    .contactinfo-block{
+        padding: 60px 0 5px 0;
+    }
+    .contactinfo-headertext{
+        font-size: 46pt;
+    }
+    .contactinfo-title{
+        font-size: 20pt;
+    }
+    .contactinfo-text{
+        font-size: 13pt;
+    }
+    .social-icons a{
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+    }
+    .social-icons a i{
+        line-height: 40px;
+    }
+    .social-icons a:hover:after {
+        width: 40px;
+        height: 40px;
+        margin-left: -20px;
+    }
+    /* Activities page */
+    .activities-block{
+        margin: 30px 0;
+    }
+    .activities-headertext{
+        margin-bottom: 20px;
+        font-size: 46pt;
+    }
+    .list-group{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 991px) {
+    .star_separator{
+        margin-bottom: 30px;
+        font-size: 20pt;
+    }
+    /* Header and welcome block */
+    .welcome-headertext{
+        font-size: 40pt;
+    }
+    .welcome-subtext{
+        margin: 20px 0;
+        font-size: 18pt;
+    }
+    .welcome-btnShowModal{
+        font-size: 12pt;
+    }
+    /* Content Schedule */
+    .schedule-block{
+        margin: 30px 0;
+    }
+    .schedule-headertext{
+        font-size: 36pt;
+    }
+    .table{
+        margin-top: 30px;
+        font-size: 16pt;
+    }
+    /* Content Achievements */
+    .achievements-block{
+        padding: 50px 0;
+    }
+    .achievements-headertext{
+        font-size: 36pt;
+    }
+    .achievements-item{
+        padding: 30px;
+    }
+    .achievements-title{
+        margin: 15px 0;
+        font-size: 18pt;
+    }
+    .achievements-text{
+        font-size: 14pt;
+    }
+    /* Content News */
+    .news-block{
+        padding: 50px 0;
+    }
+    .news-headertext{
+        font-size: 36pt;
+    }
+    .news-item{
+        padding: 30px;
+    }
+    /* Content About us */
+    .aboutus-block{
+        padding: 50px 0 0 0;
+    }
+    .aboutus-headertext{
+        font-size: 36pt;
+    }
+    .aboutus-inner{
+        margin: 50px 0;
+    }
+    .aboutus-item .card-title{
+        font-size: 18pt;
+    }
+    .aboutus-item .card-body{
+        font-size: 10pt;
+    }
+    /* Content Works */
+     .works-block{
+        padding: 50px 0 0 0;
+    }
+    .works-headertext{
+        font-size: 36pt;
+    }
+    .works-item{
+        width: 50%;
+    }
+    /* Contact info */
+    .contactinfo-block{
+        padding: 50px 0 5px 0;
+    }
+    .contactinfo-headertext{
+        font-size: 36pt;
+    }
+    #yandexmap{
+        height: 100%;
+    }
+    .contactinfo-title{
+        font-size: 15pt;
+    }
+    .contactinfo-text{
+        font-size: 10pt;
+    }
+    .contactinfo-text .p-center{
+        font-size: 11pt;
+        margin: 20px 0;
+    }
+    .social-icons a{
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+    }
+    .social-icons a i{
+        line-height: 40px;
+    }
+    .social-icons a:hover:after {
+        width: 40px;
+        height: 40px;
+        margin-left: -20px;
+    }
+    /* Activities page */
+    .activities-block{
+        margin: 25px 0;
+    }
+    .activities-headertext{
+        margin-bottom: 15px;
+        font-size: 36pt;
+    }
+    .list-group{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 780px) {
+    .star_separator{
+        margin-bottom: 20px;
+        font-size: 16pt;
+    }
+    .line_separator hr{
+        border-radius: 4px;
+        height: 4px;
+    }
+    /* Header and welcome block */
+    .welcome-headertext{
+        font-size: 30pt;
+    }
+    .welcome-subtext{
+        margin: 15px 0;
+        font-size: 16pt;
+    }
+    .welcome-btnShowModal{
+        width: 30%;
+        padding: 8px 0;
+        font-size: 10pt;
+    }
+    /* Content Schedule */
+    .schedule-block{
+        margin: 20px 0;
+    }
+    .schedule-headertext{
+        font-size: 26pt;
+    }
+    .table{
+        margin-top: 20px;
+        font-size: 14pt;
+    }
+    /* Content Achievements */
+    .achievements-block{
+        padding: 40px 0;
+    }
+    .achievements-item{
+        padding: 20px;
+        width: 50%;
+    }
+    .achievements-title{
+        font-size: 16pt;
+    }
+    .achievements-text{
+        font-size: 12pt;
+    }
+    /* Content News */
+    .news-block{
+        padding: 40px 0;
+    }
+    .news-subtext{
+        font-size: 12pt;
+    }
+    .news-item{
+        padding: 20px;
+        width: 50%;
+    }
+    /* Content About us */
+    .aboutus-block{
+        padding: 40px 0 0 0;
+    }
+    .aboutus-inner{
+        margin: 40px 0;
+    }
+    .aboutus-item{
+        width: 80%;
+    }
+    .aboutus-item .aboutus-img-col{
+        width: 100%;
+        display: flex;
+        justify-content: center;        
+    }
+    .aboutus-item .card-title{
+        font-size: 16pt;
+    }
+    .aboutus-item .aboutus-text-col{
+        width: 100%;
+    }
+    /* Content Works */
+    .works-block{
+        padding: 40px 0 0 0;
+    }
+    .works-subtext{
+        font-size: 12pt;
+    }
+    .works-item{
+        width: 100%;
+        padding: 40px;
+    }
+    .hover-text figure figcaption {
+        font-size: 1.5em;
+    }
+    /* Contact info */
+      .contactinfo-block{
+        padding: 40px 0 5px 0;
+    }
+    .contactinfo-text{
+        font-size: 10pt;
+    }
+    .contactinfo-inner{
+        margin-top: 30px;
+    }
+    .contactinfo-map{
+        width: 100%;
+        padding: 30px;
+    }
+    .contactinfo-contacts{
+        padding: 20px 20px 0;
+        width: 100%;
+    }
+    .contactinfo-text .p-center{
+        font-size: 12pt;
+        font-weight: 500;
+        margin: 20px 0;
+    }
+    /* Activities page */
+    .activities-block{
+        margin: 20px 0;
+    }
+    .list-group{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 540px) {
+    .star_separator{
+        margin-bottom: 15px;
+        font-size: 12pt;
+    }
+    .line_separator hr{
+        border-radius: 3px;
+        height: 3px;
+    }
+    /* Header and welcome block */
+    .navbar{
+        padding: 15px 0;
+    }
+    .navbar-brand{
+        font-size: 30px;
+    }
+    .nav-item a {
+        font-size: 18px;
+    }
+    .welcome-headertext{
+        font-size: 18pt;
+    }
+    .welcome-subtext{
+        margin: 10px 0;
+        font-size: 10pt;
+    }
+    .welcome-btnShowModal{
+        width: 35%;
+        padding: 6px 0;
+        font-size: 10pt;
+    }
+    /* Content Schedule */
+    .schedule-block{
+        margin: 15px 0;
+    }
+    .schedule-headertext{
+        font-size: 20pt;
+    }
+    .table{
+        margin-top: 15px;
+        font-size: 12pt;
+    }
+    /* Content Achievements */
+    .achievements-block{
+        padding: 30px 0;
+    }
+    .achievements-headertext{
+        font-size: 20pt;
+    }
+    .achievements-item{
+        width: 100%;
+    }
+    .achievements-title{
+        margin: 12px 0;
+        font-size: 16pt;
+    }
+    .achievements-text{
+        font-size: 12pt;
+    }
+    .achievements-block img{
+        width: 80px;
+    }
+    /* Content News */
+    .news-block{
+        padding: 30px 0;
+    }
+    .news-headertext{
+        font-size: 20pt;
+    }
+    .news-subtext{
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    .news-item{
+        width: 100%;
+    }
+    .news-text{
+        font-size: 10pt;
+    }
+    /* Content About us */
+    .aboutus-block{
+        padding: 30px 0 0 0;
+    }
+    .aboutus-inner{
+        margin: 30px 0;
+    }
+    .aboutus-headertext{
+        font-size: 20pt;
+    }
+    .aboutus-item .card-title{
+        font-size: 14pt;
+    }
+    .aboutus-item .card-body{
+        font-size: 8pt;
+    }
+    /* Content Works */
+    .works-block{
+        padding: 30px 0 0 0;
+    }
+    .works-headertext{
+        font-size: 20pt;
+    }
+    .works-subtext{
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    .works-inner{
+        padding: 0 30px;
+    }
+    .works-item{
+        width: 100%;
+        padding: 20px;
+    }
+    .hover-text figure figcaption {
+        font-size: 1em;
+    }
+    /* Contact info */
+    .contactinfo-block{
+        padding: 30px 0 5px 0;
+    }
+    .contactinfo-headertext{
+        font-size: 20pt;
+    }
+    .contactinfo-inner{
+        margin-top: 20px;
+    }
+    #yandexmap{
+        height: 350px;
+    }
+    /* Activities page */
+    .activities-block{
+        margin: 15px 0;
+    }
+    .activities-headertext{
+        margin-bottom: 10px;
+        font-size: 20pt;
+    }
+    .list-group{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 360px) {
+    .star_separator{
+        margin-bottom: 10px;
+        font-size: 8pt;
+    }
+    .line_separator hr{
+        border-radius: 3px;
+        height: 2px;
+    }
+    /* Header and welcome block */
+    .navbar{
+        padding: 5px 0;
+    }
+    .navbar-brand{
+        font-size: 20px;
+    }
+    .nav-item a {
+        font-size: 15px;
+        display: inline-block;
+        line-height: 1;
+        text-decoration: none;
+    }
+    .welcome-headertext{
+        font-size: 15pt;
+    }
+    .welcome-subtext{
+        margin: 8px 0;
+        font-size: 6pt;
+    }
+    .welcome-btnShowModal{
+        width: 35%;
+        padding: 5px 0;
+        font-size: 6pt;
+    }
+    /* Content Schedule */
+    .schedule-block{
+        margin: 10px 0;
+    }
+    .schedule-headertext{
+        font-size: 15pt;
+    }
+    .table{
+        margin-top: 10px;
+        font-size: 8pt;
+    }
+    /* Content Achievements */
+    .achievements-block{
+        padding: 20px 0;
+    }
+    .achievements-headertext{
+        font-size: 15pt;
+    }
+    .achievements-item{
+        padding: 30px;
+    }
+    .achievements-title{
+        margin: 10px 0;
+        font-size: 12pt;
+    }
+    .achievements-text{
+        font-size: 10pt;
+    }
+    .achievements-block img{
+        width: 50px;
+    }
+    /* Content News */
+    .news-block{
+        padding: 20px 0;
+    }
+    .news-headertext{
+        margin-bottom: 10px;
+        font-size: 15pt;
+    }
+    .news-subtext{
+        margin: 15px 0;
+        font-size: 8pt;
+    }
+    .news-item{
+        padding: 30px;
+    }
+    .news-item .card-title{
+        font-size: 10pt;
+    }
+    .news-item .card-text{
+        font-size: 8pt;
+    }
+    .news-btnReadMore{
+        font-size: 8pt;
+    }
+    .news-btnShowAllNews{
+        font-size: 10pt;
+    }
+    .news-text{
+        font-size: 8pt;
+    }
+    /* Content About us */
+    .aboutus-block{
+        padding: 20px 0 0 0;
+    }
+    .aboutus-inner{
+        margin: 20px 0;
+    }
+    .aboutus-headertext{
+        margin-bottom: 10px;
+        font-size: 15pt;
+    }
+    .aboutus-item .card-title{
+        padding: 6px 8px;
+        font-size: 10pt;
+    }
+    .aboutus-item .card-body{
+        font-size: 6pt;
+    }
+    .aboutus-item .card-text{
+        padding-left: 16px;
+    }
+    /* Content Works */
+    .works-block{
+        padding: 20px 0 0 0;
+    }
+    .works-headertext{
+        font-size: 15pt;
+    }
+    .works-subtext{
+        margin: 15px 0;
+        font-size: 8pt;
+    }
+    .works-inner{
+        padding: 0 15px;
+    }
+    .works-item{
+        padding: 5px;
+    }
+    .hover-text figure figcaption {
+        padding: 1em;
+    }
+    /* Contact info */
+    .contactinfo-block{
+        padding: 20px 0 5px 0;
+    }
+    .contactinfo-headertext{
+        font-size: 15pt;
+    }
+    .contactinfo-inner{
+        margin-top: 10px;
+    }
+    .contactinfo-map{
+        padding: 15px 20px;
+    }
+    #yandexmap{
+        height: 200px;
+    }
+    .contactinfo-title{
+        font-size: 10pt;
+    }
+    .contactinfo-text{
+        font-size: 7pt;
+    }
+    .contactinfo-text .p-center{
+        font-size: 8pt;
+    }
+    /* Activities page */
+    .activities-block{
+        margin: 10px 0;
+    }
+    .activities-headertext{
+        font-size: 15pt;
+    }
+}

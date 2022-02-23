@@ -1,0 +1,135 @@
+<!-------- header -------->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="/">
+                    MENTALIKA
+                </a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/#aboutus">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#news">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#works">Галерея</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#achievements">Наши достижения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#schedule">Расписание</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#contactinfo">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="account" >
+                <span class="account-name">
+                    {% if user %}
+                    {{ user.name }} {{ user.surname }}
+                    {% endif %}
+                </span>
+                <img class="account-profile" src="{{ '/assets/images/account.png' | theme }}" alt="" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                {% if user %}
+                <ul class="account-submenu">
+                    <li><a href="/backend">Панель управления</a></li>
+                    <hr>
+                    <li><a href="/backend/rainlab/blog/posts">Управление блогом</a></li>
+                    <hr>
+                    <li><a href="/backend/rainlab/user/users">Управление пользователями</a></li>
+                    <hr>
+                    {% for group in user.groups %}
+                    {% if group.code == 'teacher' %}
+                    <li><a href="/activities">Активность учеников</a></li>
+                    <hr>
+                    {% endif %}
+                    {% endfor %}
+                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Выйти</a></li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    {% if not user %}
+    {% partial account ~ '::signin' %}
+    <!-------- modal login -------->
+    <!-- <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Авторизация</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                {% partial account ~ '::signin' %}
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="FormControlInputEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="FormControlInputEmail"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlPassword" class="form-label">Пароль:</label>
+                        <input type="password" class="form-control" id="FormControlPassword">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Войти</button>
+                    <div class="modal-reglink" data-bs-toggle="modal" data-bs-target="#RegModal">Еще нет аккаунта? Зарегистрируйтесь</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-------- /modal login -------->
+
+    <!-------- modal registration -------->
+    {% partial account ~ '::register' %}
+    <!-- <div class="modal fade" id="RegModal" tabindex="-1" aria-labelledby="RegModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="RegModalLabel">Регистрация</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="FormControlInputName" class="form-label">Имя:</label>
+                        <input type="text" class="form-control" id="FormControlInputName"
+                            placeholder="Имя">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlInputLastName" class="form-label">Фамилия:</label>
+                        <input type="text" class="form-control" id="FormControlInputLastName"
+                            placeholder="Фамилия">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlInputEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="FormControlInputEmail"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlPassword" class="form-label">Пароль:</label>
+                        <input type="password" class="form-control" id="FormControlPassword">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-------- /modal registration -------->
+    {% endif %}
+
+</header>
+<!-------- /header -------->

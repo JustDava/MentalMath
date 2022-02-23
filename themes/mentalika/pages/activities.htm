@@ -1,0 +1,73 @@
+title = "Activities"
+url = "/activities"
+layout = "default"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+function onStart() {
+    $user = $this->account->user();
+    if($user->groups->count() == 0)
+        return Redirect::to('/');
+    else{
+        foreach($user->groups as $group) {
+            if($group->code != 'teacher' || !$user)
+                return Redirect::to('/');
+        }
+    }
+    
+    $this['students'] = DB::table('mobileapp_student_statistics')->select('id','first_name','last_name')->get();
+}
+
+==
+<div class="container-fluid activities-block">
+    <div class="activities-header">
+        <div class="activities-headertext">
+            Успеваемость учеников
+        </div>
+        <div class="line_separator">
+            <hr>
+        </div>
+        <div class="chart-panel">
+            <div class="list-group">
+                {% for student in students %}
+                <a class="list-group-item list-group-item-action" id= "{{ student.id }}">
+                    <span class="spinner-border spinner-border-sm hidden_spinner" role="status" aria-hidden="true"></span>
+                    {{ student.first_name}}  {{student.last_name}}</a>    
+                {% endfor %}
+            </div>
+            <div class="student-info">
+                <div class="student-full_name">                
+                </div>
+                <div class="student-activity_time">                
+                </div>
+                <div class="student-statisctics">                    
+                    <div class="exbook-name" id="first"></div>
+                    <div class="exbook-item">
+                        <div class="exbook-chart" id="first_exbook-chart"></div>
+                        <div class="first_exbook-answers"></div>    
+                    </div>
+                    <div class="exbook-name" id="second"></div>
+                    <div class="exbook-item">
+                        <div class="exbook-chart" id="second_exbook-chart"></div>
+                        <div class="second_exbook-answers"></div>    
+                    </div>
+                    <div class="exbook-name" id="third"></div>
+                    <div class="exbook-item">
+                        <div class="exbook-chart" id="third_exbook-chart"></div>
+                        <div class="third_exbook-answers"></div>    
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+</div>

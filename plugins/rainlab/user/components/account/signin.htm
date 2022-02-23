@@ -1,0 +1,40 @@
+{{ form_ajax('onSignin') }}
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="LoginModalLabel">Авторизация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group mb-3">
+                    <label for="userSigninLogin">{{ loginAttributeLabel }}:</label>
+                    <input name="login" type="text" class="form-control" id="userSigninLogin"
+                        placeholder="Введите ваш {{ loginAttributeLabel|lower }}" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="userSigninPassword">Пароль:</label>
+                    <input name="password" type="password" class="form-control" id="userSigninPassword"
+                        placeholder="Введите ваш пароль" />
+                </div>
+
+                {% if rememberLoginMode == 'ask' %}
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label><input name="remember" type="checkbox" value="1">Запомнить меня?</label>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Войти</button>
+                <div class="modal-reglink" data-bs-toggle="modal" data-bs-target="#RegModal">Еще нет аккаунта?
+                    Зарегистрируйтесь</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ form_close() }}

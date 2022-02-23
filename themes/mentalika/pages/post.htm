@@ -1,0 +1,36 @@
+title = "News Post"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[session]
+security = "all"
+==
+<div class="container-fluid news-block">
+    <div class="news-header">
+        <div class="news-headertext">
+            {{ post.title }}
+        </div>
+        <div class="line_separator">
+            <hr>
+        </div>
+        <div class="news-subtext">
+            {{ post.excerpt }}
+        </div>
+    </div>
+    
+    <div class="news-text">
+        {{ post.content_html|raw }}
+    </div>
+    
+
+</div>

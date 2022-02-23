@@ -1,0 +1,332 @@
+title = "Mentalika"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[contenteditor]
+file = "schedule/text.htm"
+==
+<!-------- welcome block -------->
+<div class="container-fluid welcome-block">
+
+    <img src="{{ 'assets/images/header_bg.jpg'|theme }}" class="img-fluid welcome-img" alt="">
+    <div class="container-fluid welcome-inner">
+        <div class="welcome-headertext">
+            Школа ментальной арифметики
+        </div>
+        <div class="line_separator">
+            <hr>
+        </div>
+        <div class="welcome-subtext">
+            Сайт создан для учащихся и их родителей! Здесь вы можете получить необходимую информацию о нашей школе! Все
+            новости вы можете посмотреть в разделе "Новости"​​​​​​​.
+        </div>
+        <button type="button" class="btn btn-primary welcome-btnShowModal" data-bs-toggle="modal"
+            data-bs-target="#QuestionModal">
+            Задать вопрос
+        </button>
+    </div>
+
+    <!-------- modal -------->
+    <div class="modal fade" id="QuestionModal" tabindex="-1" aria-labelledby="QuestionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="QuestionModalLabel">Задайте нам вопрос</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="FormControlInputName" class="form-label">Введите ваше имя:</label>
+                        <input type="text" class="form-control" id="FormControlInputName" placeholder="Введите имя">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlInputEmail" class="form-label">Введите email:</label>
+                        <input type="email" class="form-control" id="FormControlInputEmail"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="FormControlQuestionTextArea" class="form-label">Введите ваш вопрос:</label>
+                        <textarea class="form-control" id="FormControlQuestionTextArea" rows="3"
+                            placeholder="Введите вопрос"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------- /modal -------->
+
+</div>
+<!-------- /welcome block -------->
+
+<!-------- content schedule -------->
+<div class="container-fluid schedule-block">
+    <div class="star_separator">
+        ★★★★★★★
+    </div>
+    <div class="schedule-headertext">
+        <a name="schedule"></a>
+        Расписание занятий
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <!-- <th scope="row">#</th> -->
+                    <th scope="col">Понедельник</th>
+                    <th scope="col">Вторник</th>
+                    <th scope="col">Среда</th>
+                    <th scope="col">Четверг</th>
+                    <th scope="col">Пятница</th>
+                </tr>
+            </thead>
+            {% if user %}
+                {% if user.groups.count() > 0 %}
+                    {% for group in user.groups %}
+                        {% if group.code == 'teacher' %}
+                            {% component 'contenteditor' fixture="tbody" %}
+                        {% else %}
+                            {% content 'schedule/text.htm' %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% content 'schedule/text.htm' %}
+                {% endif %}
+            {% else %}
+                {% content 'schedule/text.htm' %}
+            {% endif %}
+           
+        </table>
+    </div>
+
+</div>
+<!-------- /content schedule -------->
+
+<!-------- content achievements -------->
+<div class="container-fluid achievements-block">
+    <div class="achievements-headertext">
+        <a name="achievements"></a>
+        Наши достижения
+    </div>
+    <div class="achievements-inner">
+        <div class="achievements-item">
+            <div class="achievements-icon">
+                <img src="{{ '/assets/images/achievements/graduation.png' | theme }}" width="100" alt="">
+            </div>
+            <div class="achievements-title">
+                Лучшие занятия
+            </div>
+            <div class="achievements-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, voluptates.
+            </div>
+        </div>
+        <div class="achievements-item">
+            <div class="achievements-icon">
+                <img src="{{ '/assets/images/achievements/book.png' | theme }}" width="100" alt="">
+            </div>
+            <div class="achievements-title">
+                Только отличники
+            </div>
+            <div class="achievements-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusamus!
+            </div>
+        </div>
+        <div class="achievements-item">
+            <div class="achievements-icon">
+                <img src="{{ '/assets/images/achievements/license.png' | theme }}" width="100" alt="">
+            </div>
+            <div class="achievements-title">
+                Первые места на олимпиаде
+            </div>
+            <div class="achievements-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, expedita.
+            </div>
+        </div>
+        <div class="achievements-item">
+            <div class="achievements-icon">
+                <img src="{{ '/assets/images/achievements/like.png' | theme }}" width="100" alt="">
+            </div>
+            <div class="achievements-title">
+                Лучшие результаты в учебе
+            </div>
+            <div class="achievements-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, porro?
+            </div>
+        </div>
+        <div class="achievements-item">
+            <div class="achievements-icon">
+                <img src="{{ '/assets/images/achievements/medal.png' | theme }}" width="100" alt="">
+            </div>
+            <div class="achievements-title">
+                Успешная сдача ГИА
+            </div>
+            <div class="achievements-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, recusandae.
+            </div>
+        </div>
+        <div class="achievements-item">
+            <div class="achievements-icon">
+                <img src="{{ '/assets/images/achievements/exam.png' | theme }}" width="100" alt="">
+            </div>
+            <div class="achievements-title">
+                Максимальные баллы на ЕГЭ
+            </div>
+            <div class="achievements-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, at!
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- /content achievements -------->
+
+<!-------- content news -------->
+
+<div class="container-fluid news-block">
+    <a name="news"></a>
+    {% partial 'news.htm' %}
+</div>
+<!-------- /content news -------->
+
+<!-------- content about us -------->
+<div class="container-fluid aboutus-block">
+    <div class="aboutus-header">
+        <div class="star_separator">
+            ★★★★★★★
+        </div>
+        <div class="aboutus-headertext">
+            <a name="aboutus"></a>
+            Наши преподаватели
+        </div>
+    </div>
+    <div class="aboutus-inner">
+        <div class="aboutus-item">
+            <div class="card border-light mb-3">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6 aboutus-img-col">
+                        <img src="{{ 'assets/images/about_us/aboutus_1.jpg' | theme }}" class="img-fluid"
+                            alt="aboutus_1">
+                    </div>
+                    <div class="col-md-6 aboutus-text-col">
+                        <div class="card-header card-title">
+                            Учитель: Анастасия Сергеевна
+                        </div>
+                        <div class="card-body">
+                            <ul class="card-text">
+                                <li>Родилась в г. Белгород.</li>
+                                <li>В 2010г. закончила МОУ "СОШ № 17".</li>
+                                <li>Образование: БГТУ им. В.г. Шухова, выпуск 2015г.</li>
+                                <li>Специальность: математика и компьютерные науки.</li>
+                                <li>В 2017 году прошла профессиональную переподготовку в НИУ БелГУ. Имеет право на
+                                    ведение профессиональной деятельности в сфере истории и методики обучения и
+                                    воспитания младших школьников.</li>
+                                <li>Свой педагогический стаж начала в "МДОУ №11"Ручеек".</li>
+                                <li>В 2018 году защитилась на 1 категорию по специальности "Воспитатель".</li>
+                                <li>С 2019 года работает в "Школе ментальной арифметики".</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- /content about us -------->
+
+<!-------- content works -------->
+<div class="container-fluid works-block">
+    <div class="works-header">
+        <div class="star_separator">
+            ★★★★★★★
+        </div>
+        <div class="works-headertext">
+            <a name="works"></a>
+            Фотографии процесса
+        </div>
+        <div class="line_separator">
+            <hr>
+        </div>
+        <div class="works-subtext">
+            Как проводятся занятия в фотографиях
+        </div>
+    </div>
+    <div class="works-inner">
+        <div class="works-item">
+            <div class="hover-text">
+                <figure class="effect-text">
+                    <img src="{{ '/assets/images/works/works_1.jpeg' | theme }}" alt="works_1">
+                    <figcaption>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="works-item">
+            <div class="hover-text">
+                <figure class="effect-text">
+                    <img src="{{ '/assets/images/works/works_2.jpeg' | theme }}" alt="works_2">
+                    <figcaption>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="works-item">
+            <div class="hover-text">
+                <figure class="effect-text">
+                    <img src="{{ '/assets/images/works/works_3.jpeg' | theme }}" alt="works_3">
+                    <figcaption>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="works-item">
+            <div class="hover-text">
+                <figure class="effect-text">
+                    <img src="{{ '/assets/images/works/works_4.jpeg' | theme }}" alt="works_4">
+                    <figcaption>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="works-item">
+            <div class="hover-text">
+                <figure class="effect-text">
+                    <img src="{{ '/assets/images/works/works_5.jpeg' | theme }}" alt="works_5">
+                    <figcaption>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="works-item">
+            <div class="hover-text">
+                <figure class="effect-text">
+                    <img src="{{ '/assets/images/works/works_6.jpeg' | theme }}" alt="works_6">
+                    <figcaption>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- /content works -------->
