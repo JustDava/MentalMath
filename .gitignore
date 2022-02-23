@@ -32,4 +32,4 @@ package-lock.json
 /node_modules
 
 # Admin data
-backend_user data.txt
+/backend_user data.txt
